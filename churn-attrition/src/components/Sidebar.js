@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Sidebar = () => {
+export const SideBar = () => {
     return (
         <div className='container-fluid'>
             <nav className="navbar navbar-expand-lg navbar-light ">

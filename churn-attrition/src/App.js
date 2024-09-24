@@ -1,17 +1,17 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar } from './components/Navbar';
-import { Sidebar }from './components/Sidebar';
-import { Homepage } from './components/Homepage';
-import { Graphcard } from './components/Graphcard';
+import { NavBar } from './components/NavBar';
+import { SideBar }from './components/SideBar';
+import { HomePage } from './components/HomePage';
+import { GraphCard } from './components/GraphCard';
 
 function App() {
   return (
     <div className='App'>
-      <Navbar />
-      <Sidebar />
-      <Homepage />
-      <Graphcard />
+      <NavBar />
+      <SideBar />
+      <HomePage />
+      <GraphCard />
     </div>
   );
 }

@@ -33,7 +33,6 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #d7d5d5 !important;
   color: #000 !important;
   font-family: 'Centra', sans-serif !important;
 }
@@ -97,8 +96,20 @@ p.danger {
 
 /************ Navbar ************/
 
+nav.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 10px 0 0 8px;
+  z-index: 9999;
+}
+
 /************ Sidebar ************/
 .sidebar {
-  /* s */
+  width: 40px;
+  background-color: aquamarine;
 }
       
+.sidebar-text{
+  padding: 14px 0;
+}

@@ -1,14 +1,30 @@
 import React from 'react'
+import { Container, Navbar, Nav, Offcanvas } from "react-bootstrap";
 
 export const SideBar = () => {
     return (
-        <div className='container-fluid'>
-            <nav className="sidebar navbar navbar-expand-lg navbar-light ">
-                <ul className="sidebar-text navbar-nav d-flex flex-column wrap">
-                    <li className="nav-item"><a className="nav-link" href="#data">Data</a></li>
-                    <li className="nav-item"><a className="nav-link" href="#analysis">Analysis</a></li>
-                </ul>
-            </nav>
-        </div>
+        <Navbar bg="light" expand={false} className="mb-3">
+            <Container fluid>
+            <Navbar.Toggle aria-controls="offcanvasNavbar" />
+            <Navbar.Offcanvas
+                id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel"
+                placement="start"
+            >
+                <Offcanvas.Header closeButton>
+                <Offcanvas.Title id="offcanvasNavbarLabel">
+                    Sidebar
+                </Offcanvas.Title>
+                </Offcanvas.Header>
+                <Offcanvas.Body>
+                <Nav className="flex-column">
+                    <Nav.Link href="#home">Home</Nav.Link>
+                    <Nav.Link href="#features">Features</Nav.Link>
+                    <Nav.Link href="#pricing">Pricing</Nav.Link>
+                </Nav>
+                </Offcanvas.Body>
+            </Navbar.Offcanvas>
+            </Container>
+        </Navbar>
     )
 }

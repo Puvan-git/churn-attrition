@@ -10,7 +10,10 @@ export const NavBar = () => {
     return (
         <Navbar expand="lg">
             <Container fluid>
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href="#home" 
+                onClick={() => {
+                    setActive('Home');
+                }}>
                     <img src={home} alt="logo" className="logo-img"></img>
                 </Navbar.Brand>
                 <Breadcrumb className="breadcrumb">

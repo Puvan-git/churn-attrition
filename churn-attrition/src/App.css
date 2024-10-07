@@ -126,6 +126,11 @@ p.danger {
   background-color: inherit;
 }
 
+/************ GraphCard ************/
+h1 {
+  margin: 10px 0;
+}
+
 /************ Sidebar ************/
 .sidebar {
   width: 40px;

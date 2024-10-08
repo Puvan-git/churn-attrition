@@ -1,0 +1,11 @@
+customer_id,age,gender,income,churn
+1,25,Male,50000,0
+2,34,Female,62000,1
+3,29,Male,59000,0
+4,45,Female,54000,1
+5,22,Male,43000,0
+6,38,Female,75000,1
+7,30,Male,67000,0
+8,26,Female,48000,0
+9,50,Male,80000,1
+10,28,Female,51000,0

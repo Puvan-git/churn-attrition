@@ -16,8 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from . import views
+from churn_app import views
 
 urlpatterns = [
-    path('api/churn/churn_analysis/', views.churn_analysis_views, name='churn_analysis'),
+    path('api/churn_app/churn_analysis/', views.churn_analysis_view),
 ]

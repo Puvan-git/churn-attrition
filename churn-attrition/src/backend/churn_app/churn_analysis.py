@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 def churn_analysis():
     # Load the dataset from the CSV file
-    data = pd.read_csv('customer_data.csv')
+    data = pd.read_csv('/Users/puvan/Desktop/CS/projects/churn-attrition/churn-attrition/src/backend/churn_app/customer_data.csv')
     
     # Separate churned and active customers
     churned_customers = data[data['churn'] == 1]
@@ -13,12 +13,12 @@ def churn_analysis():
     churn_rate = len(churned_customers) / len(data)
 
     # Generate a basic bar plot of churned vs active customers
-    plt.figure(figsize=(8, 6))
-    data['churn'].value_counts().plot(kind='bar')
-    plt.title('Churn vs Active Customers')
-    plt.xlabel('Customer Status (0 = Active, 1 = Churned)')
-    plt.ylabel('Count')
-    plt.savefig('churn_analysis.png')  # Save the plot to a file
+    # plt.figure(figsize=(8, 6))
+    # data['churn'].value_counts().plot(kind='bar')
+    # plt.title('Churn vs Active Customers')
+    # plt.xlabel('Customer Status (0 = Active, 1 = Churned)')
+    # plt.ylabel('Count')
+    # plt.savefig('churn_analysis.png')  # Save the plot to a file
 
     # Return churn analysis results as a dictionary
     return {

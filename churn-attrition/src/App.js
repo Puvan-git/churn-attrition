@@ -1,8 +1,8 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavBar } from './components/NavBar';
-// import { SideBar }from './components/SideBar';
-// import { HomePage } from './components/HomePage';
+import { SideBar }from './components/SideBar';
+import { HomePage } from './components/HomePage';
 import { GraphCard } from './components/GraphCard';
 
 function App() {

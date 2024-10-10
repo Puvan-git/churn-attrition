@@ -45,7 +45,7 @@ def chi_square_test(combined_df, categorical_cols):
     # Perform Chi-Squared tests for categorical features against target variable Attrition_Flag
     for feature in categorical_cols:
         contingency = pd.crosstab(combined_df[feature], combined_df['Attrition_Flag'])
-        chi2, p = scipy.stats.chi2_contingency(contingency, correction=False)
+        chi2, p, _, _ = scipy.stats.chi2_contingency(contingency, correction=False)
         chi2_stats.append(chi2)
         p_values.append(p)
         features.append(feature)
@@ -106,11 +106,11 @@ def feature_importance():
     feature_names = ct.get_feature_names_out()
 
     return {
-        'feature_importances': feature_importances,
+        'feature_importances': feature_importances.tolist(),
         'f1': f1,        
         'precision': precision,
         'recall': recall,
-        'feature_names': feature_names,
+        'feature_names': feature_names.tolist(),
     }
     
 
@@ -135,4 +135,3 @@ combined_df['Loyalty_Score'] = combined_df['Total_Trans_Ct'] / combined_df['Mont
 
 # Continuing from previous preprocessing steps with the additional Loyalty_Score feature
 numerical_cols = numerical_cols + ['Loyalty_Score'] 
-

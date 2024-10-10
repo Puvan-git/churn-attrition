@@ -10,4 +10,15 @@ from .churn_analysis import feature_importance, correlation_matrix
 def churn_analysis_view(request):
     feature = feature_importance() # call feature importance logic
     matrix = correlation_matrix() # call correlation matrix logic
-    return JsonResponse(feature, matrix) # Return results as JSON
+    
+    # Convert the DataFrame to a dictionary
+    matrix_dict = matrix.to_dict(orient="records")  # You can also use orient="index" if you prefer
+    
+    # Combine the feature data and matrix data
+    response_data = {
+        'feature': feature,
+        'matrix': matrix_dict
+    }
+    
+    # Return the response as a JSON
+    return JsonResponse(response_data)

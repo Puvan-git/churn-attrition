@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
+import * as d3 from "d3";
 
 export const GraphCard = () => {
     const [data, setData] = useState(null);

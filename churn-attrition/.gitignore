@@ -25,9 +25,6 @@ yarn-error.log*
 venv/
 .env/
 
-# Ignore node_modules for the frontend
-node_modules/
-
 # Ignore compiled bytecode files
 __pycache__/
 *.py[cod]
@@ -38,3 +35,7 @@ __pycache__/
 # Ignore system-specific files
 .DS_Store
 *.log
+
+# Ignore data files
+*.csv
+*.xlsx

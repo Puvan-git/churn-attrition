@@ -15,7 +15,7 @@ export const GraphCard = () => {
 
     if (!data) {
         return (
-            <div>
+            <div className="loading">
                 <h1>Churn Attrition Dashboard Analytics</h1>
                 <h2>Loading...</h2>
             </div>

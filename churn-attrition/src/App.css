@@ -127,6 +127,10 @@ p.danger {
 }
 
 /************ GraphCard ************/
+.loading {
+  margin: 10px 15px;
+}
+
 h1 {
   margin: 10px 0;
 }

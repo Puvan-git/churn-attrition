@@ -15,14 +15,17 @@ export const GraphCard = () => {
 
     if (!data) {
         return (
-            <div>Loading...</div>
+            <div>
+                <h1>Churn Attrition Dashboard Analytics</h1>
+                <h2>Loading...</h2>
+            </div>
         );
     }
 
     return (
         <Container fluid>
             <h1>Churn Attrition Dashboard Analytics</h1>
-            <p>Total Cusotmers: {data.total_customers}</p>
+            <p>Total Customers: {data.total_customers}</p>
             <p>Churned Customers: {data.churned_customers}</p>
             <p>Churn Rate: {data.churn_rate}</p>
         </Container>

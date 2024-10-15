@@ -11,9 +11,9 @@ export default function FeatureImpt({ featureData }) {
             importance: importance
         }));
 
-        const width = 400;
+        const width = 600;
         const height = 300;
-        const margin = { top: 20, right: 30, bottom: 40, left: 90 };
+        const margin = { top: 20, right: 30, bottom: 40, left: 170 };
 
         const svg = d3.select("#feature-impt-chart")
             .append("svg")
@@ -41,9 +41,11 @@ export default function FeatureImpt({ featureData }) {
             .attr("width", d => x(d.importance))
             .attr("height", y.bandwidth())
             .attr("fill", "steelblue");
-
+            
         svg.append("g")
-            .call(d3.axisLeft(y));
+            .call(d3.axisLeft(y))
+            .selectAll("text")
+            .attr("transform", "rotate(-20)");
 
         svg.append("g")
             .attr("transform", `translate(0, ${height - margin.top - margin.bottom})`)

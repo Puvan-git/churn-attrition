@@ -3,14 +3,14 @@ import * as d3 from 'd3';
 
 export default function CorrMatrix ({ matrixData }) {
     useEffect(() => {
-        d3.select("#corr-matrix-chart").selectAll("svg").remove();
+            d3.select("#corr-matrix-chart").selectAll("svg").remove();
 
         const features = matrixData.map(item => item.Feature);
         const chi2Values = matrixData.map(item => item['Chi2 Statistic']);
 
         const width = 400;
         const height = 300;
-        const margin = { top: 50, right: 0, bottom: 50, left: 50 };
+        const margin = { top: 50, right: 0, bottom: 50, left: 90 };
 
         const svg = d3.select("#corr-matrix-chart")
             .append("svg")
@@ -45,7 +45,11 @@ export default function CorrMatrix ({ matrixData }) {
             .style("fill", d => colorScale(d['Chi2 Statistic']));
 
         svg.append("g")
-            .call(d3.axisTop(x));
+            .call(d3.axisTop(x))
+            .selectAll("text")
+            .attr("width", "154")
+            .attr("dy", "-1.2em")
+            .attr("transform", "rotate(-25)");
 
         svg.append("g")
             .call(d3.axisLeft(y));

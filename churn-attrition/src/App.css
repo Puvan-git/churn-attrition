@@ -141,7 +141,7 @@ h1 {
 }
 
 .feature, .corr {
-  width: auto;
+  min-width: 650px;
   padding: 20px;
   background-color: #f8f9fa;
   border: 2px solid #ccc;

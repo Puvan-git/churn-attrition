@@ -21,12 +21,12 @@ export const NavBar = () => {
                     onClick={() => {
                         setActive('Home');
                     }} href="#home">Home</Breadcrumb.Item>
-                    <Breadcrumb.Item active={isActive === 'Form'? true: false} 
+                    {/* <Breadcrumb.Item active={isActive === 'Form'? true: false} 
                     onClick={ () => {
                         setActive('Form');
-                    }} href="#analysis">Form</Breadcrumb.Item>
+                    }} href="#analysis">Form</Breadcrumb.Item> */}
                 </Breadcrumb>
-                <Form className="d-flex form">
+                {/* <Form className="d-flex form">
                     <Form.Control
                         type="search"
                         placeholder="Search"
@@ -36,7 +36,7 @@ export const NavBar = () => {
                     <Button>
                         <img src={searchBar} alt="search" className="logo-img"></img>
                     </Button>
-                </Form>
+                </Form> */}
             </Container>
         </Navbar>
     )

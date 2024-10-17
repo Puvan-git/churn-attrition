@@ -55,7 +55,7 @@ export default function FeatureImpt({ featureData }) {
             
 
     return (
-        <div>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <h1>Feature Importances</h1>
             <div id='feature-impt-chart'></div>
         </div>

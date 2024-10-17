@@ -56,7 +56,7 @@ export default function CorrMatrix ({ matrixData }) {
         }, [matrixData]);    
 
     return (
-        <div>
+        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
             <h1>Correlation Matrix</h1>
             <div id="corr-matrix-chart"></div>
         </div>

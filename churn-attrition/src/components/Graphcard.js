@@ -47,10 +47,22 @@ export const GraphCard = () => {
             <h1>Churn Attrition Dashboard Analytics</h1>
             <Row>
                 <Col>
-                    <FeatureImpt featureData={pageData.feature} />  
+                    <div className="feature">
+                        <FeatureImpt featureData={pageData.feature} />
+                    </div>
                 </Col>
                 <Col>
-                    <CorrMatrix matrixData={pageData.matrix} /> 
+                    <div className="corr">
+                        <CorrMatrix matrixData={pageData.matrix} />
+                    </div>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    {/* <CorrMatrix someData={pageData.matrix} /> */}
+                </Col>
+                <Col>
+                    {/* <CorrMatrix someData={pageData.matrix} /> */}
                 </Col>
             </Row>
         </Container>

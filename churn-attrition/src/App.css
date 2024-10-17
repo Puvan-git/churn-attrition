@@ -128,11 +128,25 @@ p.danger {
 
 /************ GraphCard ************/
 .loading {
-  margin: 10px 15px;
+  padding: 20px;
 }
 
 h1 {
-  margin: 10px 0;
+  padding: 20px;
+  font-weight: 400;
+}
+
+.row {
+  padding: 0 10px;
+}
+
+.feature, .corr {
+  width: auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  align-items: center;
 }
 
 /************ Sidebar ************/

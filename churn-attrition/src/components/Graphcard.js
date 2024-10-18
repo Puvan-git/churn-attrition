@@ -59,7 +59,7 @@ export const GraphCard = () => {
             </Row>
             <Row>
                 <Col>
-                    {/* <CorrMatrix someData={pageData.matrix} /> */}
+                    {/* <PieChart pieData={pageData.pie}/> */}
                 </Col>
                 <Col>
                     {/* <CorrMatrix someData={pageData.matrix} /> */}

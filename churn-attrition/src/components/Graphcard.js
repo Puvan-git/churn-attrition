@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import FeatureImpt from './FeatureImpt';
 import CorrMatrix from './CorrMatrix';
+import PieChart from './PieChart';
 
 export const GraphCard = () => {
     const [loading, setLoading] = useState(true);
@@ -43,7 +44,7 @@ export const GraphCard = () => {
     }
 
     return (
-        <Container fluid>
+        <Container fluid className="graph">
             <h1>Churn Attrition Dashboard Analytics</h1>
             <Row>
                 <Col>
@@ -57,14 +58,16 @@ export const GraphCard = () => {
                     </div>
                 </Col>
             </Row>
-            <Row>
+            {/* <Row>
                 <Col>
-                    {/* <PieChart pieData={pageData.pie}/> */}
+                    <div className="pie">
+                        <PieChart />
+                    </div>
                 </Col>
                 <Col>
                     {/* <CorrMatrix someData={pageData.matrix} /> */}
-                </Col>
-            </Row>
+                {/* </Col> */}
+            {/* </Row> */}
         </Container>
     )
 }

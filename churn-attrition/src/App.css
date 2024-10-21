@@ -127,6 +127,11 @@ p.danger {
 }
 
 /************ GraphCard ************/
+.graph {
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 21, 255, 0.249), rgba(140, 146, 172, 1));
+}
+
 .loading {
   padding: 20px;
 }
@@ -140,13 +145,15 @@ h1 {
   padding: 0 10px;
 }
 
-.feature, .corr {
+.feature, .corr, .pie {
   min-width: 650px;
   padding: 20px;
   background-color: #f8f9fa;
   border: 2px solid #ccc;
   border-radius: 15px;
   align-items: center;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 /************ Sidebar ************/

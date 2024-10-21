@@ -3,7 +3,7 @@ import * as d3 from 'd3';
 
 export default function CorrMatrix ({ matrixData }) {
     useEffect(() => {
-            d3.select("#corr-matrix-chart").selectAll("svg").remove();
+        d3.select("#corr-matrix-chart").selectAll("svg").remove();
 
         const features = matrixData.map(item => item.Feature);
         const chi2Values = matrixData.map(item => item['Chi2 Statistic']);

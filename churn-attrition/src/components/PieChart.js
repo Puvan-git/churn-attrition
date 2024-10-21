@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react'
 import * as d3 from 'd3';
 
-export function PieChart( pieData ) {
-    // d3.select("#pie-chart").selecAll("svg").remove();
+export default function PieChart( pieData ) {
+    useEffect(() => {
+        d3.select("#pie-chart").selectAll("svg").remove();
+
+    }, [])
+
     return (
-        <div></div>
+        <div>
+            <h1>Pie Chart</h1>
+            <div id="pie-chart"></div>
+        </div>
     )
 }

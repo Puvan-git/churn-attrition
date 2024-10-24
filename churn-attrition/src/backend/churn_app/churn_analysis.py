@@ -13,7 +13,7 @@ def feature_eng(feature1, feature2):
     finance_aggregated = feature1.groupby('CLIENTNUM').agg({
         'Trans_Amount': 'sum',  # Summing up all transactions per client
         'Revenue': 'sum',       # Summing up all revenue per client
-        # more aggregation functions can be added for other columns if necessary
+        'No_of_Customers': 'sum', # more aggregation functions can be added for other columns if necessary
     }).reset_index()
 
     # Filter rows for the year 2019
